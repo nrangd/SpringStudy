@@ -2,10 +2,10 @@ package com.kd.springmvc.dto;
 
 public class Coffee {
 	// * 필드의 변수명들이 파라미터의 name과 정확히 일치해야 한다
-	Integer coffee_id;
-	String coffee_name;
-	String coffee_bean;
-	String coffee_price;
+	private Integer coffee_id;
+	private String coffee_name;
+	private String coffee_bean;
+	private String coffee_price;
 	
 	public Coffee() {};
 	
