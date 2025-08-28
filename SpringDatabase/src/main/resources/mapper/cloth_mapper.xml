@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Clothes">
+  <select id="selectAll" resultType="clt">
+    SELECT * FROM clothes
+  </select>
+  
+  <select id="get" resultType="clt" parameterType="Integer">
+  	SELECT * FROM clothes WHERE cloth_id = #{cloth_id}
+  </select>
+  
+  <delete id="delete" parameterType="Integer">
+  	DELETE FROM clothes WHERE cloth_id = #{cloth_id}
+  </delete>
+  
+  <update id="update" parameterType="java.util.HashMap">
+  	UPDATE 
+  		clothes 
+  	SET 
+  		cloth_part = #{cloth_part},
+  		cloth_brand = #{cloth_brand},
+  		cloth_size = #{cloth_size},
+  		cloth_price = #{cloth_price}
+  	WHERE
+  		cloth_id = #{cloth_id}
+  </update>
+  
+  <insert id="insert" parameterType="java.util.HashMap">
+  	INSERT INTO clothes(cloth_id, cloth_part, cloth_brand, cloth_size, cloth_price) 
+  	VALUES(
+			cloth_id_sequence.nextval,
+			#{cloth_part},
+			#{cloth_brand},
+			#{cloth_size},
+			#{cloth_price}
+  		)
+  </insert>
+  
+  <!-- 
+	insert ver2 : insert 하기 전에 selectKey를 활용해 키를 먼저 뽑는 방식
+	이 insert의 실행 결과로 성공 여부 대신에 방금 insert에 성공한 기본키 값을 반환하게 된다
+  -->
+  <insert id="insert2" parameterType="clt">
+  	<selectKey order="BEFORE" keyProperty="cloth_id" resultType="Integer">
+  		SELECT cloth_id_sequence.nextval FROM dual
+  	</selectKey>
+  	INSERT INTO clothes(cloth_id, cloth_part, cloth_brand, cloth_size, cloth_price) 
+  	VALUES(
+			#{cloth_id},
+			#{cloth_part},
+			#{cloth_brand},
+			#{cloth_size},
+			#{cloth_price}
+  		)
+  </insert>
+</mapper>

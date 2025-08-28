@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8" />
+	<title>상품수정</title>
+</head>
+<body>
+	<h3>상품 추가하기</h3>
+	
+	<form id="f" method="POST">
+		종류 : <input type="text" name="cloth_part"/> <br>
+		브랜드 : <input type="text" name="cloth_brand"/> <br>
+		사이즈 : 
+		<select name="cloth_size">
+			<option th:each="size: ${sizes}" th:value="${size}" th:text="${size}"></option>
+		</select> <br>
+		가격 : <input type="text" name="cloth_price"/>
+	</form>
+	
+	<button id="btn1" form="f">등록1</button>
+	<button id="btn2" form="f">등록2</button>
+		
+	<button>목록으로</button>
+	
+	<script>
+		const btn1 = document.getElementById('btn1');
+		const btn2 = document.getElementById('btn2');
+		const f = document.getElementById('f');
+		
+		btn1.addEventListener('click', (e) => {
+			f.action = "./insert";
+			f.submit();
+		});
+		
+		btn2.addEventListener('click', (e) => {
+			f.action = "./insert2";
+			f.submit();
+		});
+	</script>
+</body>
+</html>

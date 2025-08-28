@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title></title>
+</head>
+<body>
+	<h3>상품 수정하기</h3>
+	
+	<form id="f" action="./modify" method="POST">
+		ID : <input type="text" name="cloth_id" th:value="${cloth.cloth_id}" readonly /> <br>
+		종류 : <input type="text" name="cloth_part" th:value="${cloth.cloth_part}" /> <br>
+		브랜드 : <input type="text" name="cloth_brand" th:value="${cloth.cloth_brand}" /> <br>
+		사이즈 : <input type="text" name="cloth_size" th:value="${cloth.cloth_size}" /> <br>
+		가격 : <input type="text" name="cloth_price" th:value="${cloth.cloth_price}" />
+	</form>
+	
+	<button type="submit" form="f">수정하기</button>
+	<button>목록으로</button>
+	
+	<h3>시간 보내기 (DTO로 바인딩 확인 테스트)</h3>
+	
+	<form action="./timetest" method="POST">
+		<input type="date" name="regist_date"/>
+		<input type="datetime-local" name="regist_date2"/>
+		<input type="submit" value="테스트!"/>
+	</form>
+	
+	<form action="./timetest2" method="POST">
+		<input type="date" name="regist_date"/>
+		<input type="datetime-local" name="regist_date2"/>
+		<input type="submit" value="테스트!"/>
+	</form>
+</body>
+</html>

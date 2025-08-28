@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8" />
+	<title>옷 목록들</title>
+	<style>
+		.rows {
+			display: grid; grid-template-columns: repeat(6, 1fr);
+		}
+	</style>
+</head>
+<body>
+	<h3>옷 목록들</h3>
+	<div class="rows">
+		<div>ID</div>
+		<div>종류</div>
+		<div>브랜드</div>
+		<div>사이즈</div>
+		<div>가격</div>
+	</div>
+	<div th:each="cloth: ${clothes}" class="rows">
+		<div class="cloth_id" th:text="${cloth.cloth_id}"></div>
+		<div class="cloth_part" th:text="${cloth.cloth_part}"></div>
+		<div class="cloth_brand" th:text="${cloth.cloth_brand}"></div>
+		<div class="cloth_size" th:text="${cloth.cloth_size}"></div>
+		<div class="cloth_price" th:text="${cloth.cloth_price}"></div>
+		<div>
+			<button class="modi_btn" th:data-id="${cloth.cloth_id}">수정</button>
+			<button class="del_btn" th:data-id="${cloth.cloth_id}">삭제</button>
+			<form action="./delete" method="POST">
+				<input type="hidden" name="cloth_id" th:value="${cloth.cloth_id}" />
+			</form>
+		</div>
+	</div>
+	
+	<button id="add_btn" onclick="location.href='./insert';">추가하기</button>
+	<script src="/cloth/js/list.js"></script>
+</body>
+</html>
