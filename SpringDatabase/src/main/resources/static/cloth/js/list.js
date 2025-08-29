@@ -10,7 +10,7 @@ del_btns.forEach(del_btn => {
 });
 
 function modifyEvent(e) {
-	console.log("수정 버트 클릭함! - ", e.target);
+	console.log("수정 버튼 클릭함! - ", e.target);
 	
 	location.href=`./modify?cloth_id=${e.target.dataset.id}`;
 }
