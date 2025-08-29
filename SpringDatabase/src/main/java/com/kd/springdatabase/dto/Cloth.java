@@ -8,11 +8,11 @@ import lombok.Data;
 
 @Data
 public class Cloth {
-	Integer cloth_id;
-	String cloth_part;
-	String cloth_brand;
-	String cloth_size;
-	Integer cloth_price;
+	private Integer cloth_id;
+	private String cloth_part;
+	private String cloth_brand;
+	private String cloth_size;
+	private Integer cloth_price;
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date regist_date;
 //	@DateTimeFormat(pattern = "yyyy-MM-ddTHH:mm")

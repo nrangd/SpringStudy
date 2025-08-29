@@ -8,10 +8,10 @@ import lombok.Data;
 
 @Data
 public class Dog {
-	String name;
-	Integer age;
+	private String name;
+	private Integer age;
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
-	Date regist_date;
+	private Date regist_date;
 	@DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm")
-	Date regist_date2;
+	private Date regist_date2;
 }
