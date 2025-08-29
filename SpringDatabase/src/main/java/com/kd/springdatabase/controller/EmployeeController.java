@@ -25,9 +25,9 @@ public class EmployeeController {
 	public void list(Model model) {
 		List<Employee> employees = employeeMapper.selectAll();
 		
-		for (Employee emp : employees) {
-			log.info("{}", emp);			
-		}
+//		for (Employee emp : employees) {
+//			log.info("{}", emp);			
+//		}
 		
 		model.addAttribute("employees", employees);
 	}
