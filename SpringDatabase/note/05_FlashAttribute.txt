@@ -14,4 +14,4 @@
    리다이렉트가 도착할 때까지만 세션에 유지되는 어트리뷰트가 된다
  - flashAttribute는 리다이렉트로 도착한 컨트롤러의 모델 객체에 저장에 저장되어 있다
  
-# 사용 예시는 HomeController에서 확인
+# 사용 예시는 GuideController에서 확인
