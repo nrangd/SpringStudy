@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+#ajax-req, 
+#ajax_json_req, 
+#ajax_method_list > li, 
+#ajax_status_req {
+	width: fit-content;
+	padding: 3px;
+	user-select: none;
+}
+
+#ajax_req:hover, 
+#ajax_json_req:hover, 
+#ajax_method_list > li:hover, 
+#ajax_status_req:hover {
+	background-color: red;
+	color:wheat;
+	width: fit-content;
+	cursor: pointer;
+}
+
+#ajax_status_req ~ li {
+	display: none;
+}
+
+#ajax_status_req ~ li.show {
+	display: block;
+}
