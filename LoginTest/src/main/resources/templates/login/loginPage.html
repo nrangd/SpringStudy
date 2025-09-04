@@ -3,37 +3,15 @@
 <head>
 	<meta charset="UTF-8" />
 	<title>LoginPage</title>
-	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+	<script th:src="@{/jquery-3.7.1.min.js}"></script>
 </head>
 <body>
 	
-	LoginPage <br>
+	LoginPage <br> 
 	ID: <br> <input type="text" id="login_id"> <br> 
 	password: <br> <input type="password" id="login_password"> <br> 
 	<button id="login_btn">Login</button> 
 	
-	<script>
-		const id = $('#login_id');
-		const password = $('#login_password');
-		
-		const btn = $('#login_btn');
-		
-		btn.click((e) => {
-			$.ajax({
-				url : '/login/test',
-				data : JSON.stringify({login_id:id.val(), login_password:password.val()}),
-				type : 'post',
-				dataType: 'json',
-				contentType: 'application/json; charset=utf-8'
-			}).done(function(result) {
-				console.log("로그인 성공?");
-				// 여기서 세션을 받건 활용할수 있는 값을 받아보자
-				// 혹은 상태메세지도 좋을 듯
-				console.log(result);
-			}).fail(function(xhr, status, errorThrown) {
-				console.log("에러");
-			});
-		});
-	</script>
+	<script th:src="@{/login.js}"></script>
 </body>
 </html>
