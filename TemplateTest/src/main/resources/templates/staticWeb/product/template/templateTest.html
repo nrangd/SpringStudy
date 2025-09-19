@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>자동차보험</title>
+  <style>
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      margin: 0;
+    }
+
+    .mall-title {
+      background-color: #f5faff;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .top-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 80px;
+    }
+
+    .text-section {
+      max-width: 600px;
+    }
+
+    .breadcrumb {
+      font-size: 14px;
+      color: #999;
+      margin-bottom: 20px;
+    }
+
+    .title {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .badge {
+      background-color: #e5f0ff;
+      color: #1e73e8;
+      font-size: 14px;
+      padding: 4px 8px;
+      border-radius: 15px;
+      margin-left: 10px;
+      vertical-align: middle;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .description {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      background-color: #1e73e8;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .image-section {
+      max-width: 400px;
+    }
+
+    .image-section img {
+      width: 100%;
+    }
+
+    /* 아래 상품 소개 섹션 */
+    .section {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 40px 0;
+      border-bottom: 1px solid #eaeaea;
+    }
+
+    .section .content {
+      max-width: 750px;
+    }
+
+    .section h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .section > .content ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .section > .content ul li {
+      position: relative;
+      padding-left: 24px;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    .section > .content ul li::before {
+      content: "✔";
+      color: #1e73e8;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .section .image {
+      max-width: 150px;
+    }
+
+    .section .image img {
+      width: 100%;
+    }
+
+    .note {
+      font-size: 13px;
+      color: #888;
+      margin-top: 8px;
+    }
+
+    /* 탭 메뉴 (상품소개/보장내용) */
+    .tabs {
+      display: flex;
+      /* border-bottom: 2px solid #ccc; */
+      margin-bottom: 40px;
+    }
+
+    .tabs div {
+      padding: 10px 20px;
+      font-weight: bold;
+      cursor: pointer;
+      color: #999;
+    }
+
+    .tabs .active {
+      border-bottom: 3px solid #1e73e8;
+      color: #1e73e8;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="mall-title">
+
+    <!-- 상단 자동차 보험 소개 -->
+    <div class="container top-section">
+      <div class="text-section">
+        <div class="breadcrumb">홈 > 보험상품/대출 > 자동차 > <strong>자동차보험(인터넷가입)</strong></div>
+        <div class="title">
+          자동차보험 
+          <!-- 선택요소(없을수도있음) -->
+          <span class="badge">인터넷가입</span>
+        </div>
+        <p class="subtitle">다이렉트 자동차보험 가입 1위</p>
+        <p class="description">(14년~24년, 수입보험료 기준)</p>
+        <button class="btn">보험료 계산</button>
+      </div>
+      <div class="image-section">
+        <img src="car-insurance-trophy.png" alt="자동차보험 일러스트">
+      </div>
+    </div>
+
+  </div>
+  
+  <div class="mall-text">
+      <div class="container">
+        <!-- 탭 메뉴 -->
+        <div class="tabs">
+          <div class="tab active">상품소개</div>
+          <div class="tab">보장내용</div>
+        </div>
+    
+        <!-- 상품 소개 섹션 1 -->
+        <div class="section">
+          <div class="content">
+            <h2>인터넷으로 직접 가입해서 개인용 평균 21.1% 저렴한 보험료</h2>
+            <ul>
+              <li>자사 오프라인 상품 가입 대비 개인용 평균 21.1% 저렴</li>
+              <li>인터넷으로 직접 설계하고 가입하여 판매수수료 0원</li>
+            </ul>
+          </div>
+          <div class="image">
+            <img src="icon-online-check.png" alt="온라인 체크 아이콘">
+          </div>
+        </div>
+    
+        <!-- 상품 소개 섹션 2 -->
+        <div class="section">
+          <div class="content">
+            <h2>다양한 할인 특약으로 보험료 할인</h2>
+            <ul>
+              <li>마일리지, 블랙박스, 자녀사랑 할인 특약 등 가입으로 보험료 할인</li>
+            </ul>
+            <div class="note">* 특약별 가입대상 및 조건에 대한 자세한 내용은 각 특약 상세 페이지에서 확인 가능</div>
+          </div>
+          <div class="image">
+            <img src="icon-discount-calc.png" alt="계산기 할인 아이콘">
+          </div>
+        </div>
+
+        <div class="section">
+            <ul>
+                <li class="note">설명</li>
+                <li class="note">설명</li>
+            </ul>
+        </div>
+    
+        <div class="section" style="justify-content: right;">
+            <button>버튼1</button>
+            <button>버튼2</button>
+            <button>버튼3</button>
+        </div>
+      </div>
+  </div>
+
+
+</body>
+</html>

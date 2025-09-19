@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>sections</title>
+</head>
+<body>
+	<div th:fragment="sections" th:each="section : ${sections}" class="section">
+        <h4 th:text="${section.title}"></h4>
+        <ul>
+            <li th:each="intext : ${section.intexts}" th:text="${intext}">
+				자사 오프라인 상품 가입 대비 개인용 평균 21.1% 저렴
+			</li>
+        </ul>
+		<dl th:if="${section.infos}">
+			<dt>꼭 확인하세요</dt>
+			<dd>
+				<ul>
+					<li th:each="info : ${section.infos}" th:text="${info}"></li>
+				</ul>
+			</dd>
+		</dl>
+	</div>
+</body>
+</html>
